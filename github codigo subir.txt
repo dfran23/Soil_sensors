@@ -1,0 +1,5 @@
+git init 
+git add . 
+git commit -m "mi tarea"  
+git remote add origin https://github.com/dfran23/Soil_sensors.git
+git push   origin master  

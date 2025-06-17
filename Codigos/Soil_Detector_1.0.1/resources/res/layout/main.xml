@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:tag="configure block" android:background="#202020" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="1.5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <Button android:id="@+id/open_device" android:background="@drawable/button_pattern" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/open" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="#ffffff" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/baudRate" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/baud_rate_str" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/baudRateValue" android:background="#0877a6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="#ffffff" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/stopBit" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/stop_bit" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/stopBitValue" android:background="#0877a6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="#ffffff" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/dataBit" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/data_bit" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/dataBitValue" android:background="#0877a6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="#ffffff" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/parity" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/parity_str" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/parityValue" android:background="#0877a6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="#ffffff" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/flowControl" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/flow" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/flowControlValue" android:background="#0877a6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <Button android:gravity="center" android:id="@+id/configButton" android:background="@drawable/button_pattern" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp" android:scaleType="centerInside" android:text="@string/config" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:tag="Read block" android:background="#202020" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="1.5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <TextView android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@+id/ReadBytes" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/read_bytes" android:layout_weight="3"/>
+        <EditText android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/ReadValues" android:background="#0877a6" android:focusableInTouchMode="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_weight="1"/>
+        <Button android:gravity="center" android:id="@+id/clearButton" android:background="@drawable/button_pattern" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:scaleType="centerInside" android:text="@string/clear" android:layout_weight="3"/>
+    </LinearLayout>
+    <LinearLayout android:tag="Write block" android:background="#202020" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="3dp" android:layout_weight="1">
+        <TextView android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@+id/WriteBytes" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/write_bytes" android:layout_weight="3"/>
+        <EditText android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/WriteValues" android:background="#0877a6" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:hint="@string/hint" android:maxLength="255" android:editable="true" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:tag="configure block" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="3">
+            <Button android:gravity="center" android:id="@+id/WriteButton" android:background="@drawable/button_pattern" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:scaleType="centerInside" android:text="@string/write" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
