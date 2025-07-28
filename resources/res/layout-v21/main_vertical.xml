@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/colorBlack" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/form_bg" android:layout_width="match_parent" android:layout_height="150dp">
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="山东君阳农业科技发展有限公司" android:elevation="3dp"/>
+        <LinearLayout android:gravity="center_horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp">
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="技术服务热线：" android:elevation="3dp"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorOrange" android:gravity="center" android:id="@+id/tv_tel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="13280768971" android:elevation="3dp"/>
+        </LinearLayout>
+        <TextView android:textSize="24sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Soil Parameter Detector" android:elevation="3dp"/>
+        <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/tv_bt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="打印机 未连接" android:drawableLeft="@drawable/ic_bt" android:drawablePadding="5dp"/>
+    </LinearLayout>
+    <LinearLayout android:tag="configure block" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="1.5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+        <Button android:textColor="@color/colorWhite" android:id="@+id/open_device" android:background="@drawable/bg_button" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:text="@string/open" android:layout_weight="1"/>
+        <ToggleButton android:textColor="@color/colorWhite" android:id="@+id/hexbuton" android:background="@drawable/bg_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:checked="false" android:textOn="16进制" android:textOff="字符型" android:layout_weight="1"/>
+        <Button android:enabled="false" android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/parameter" android:background="@drawable/bg_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerInside" android:text="@string/parameter" android:layout_weight="1"/>
+        <Button android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/configButton" android:background="@drawable/bg_button" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="5dp" android:scaleType="centerInside" android:text="@string/config" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:tag="Read block" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="1.5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="@color/colorTheme" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/baudRate" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/baud_rate_str" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/baudRateValue" android:background="@color/colorTheme" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="@color/colorTheme" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/stopBit" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/stop_bit" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/stopBitValue" android:background="@color/colorTheme" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="@color/colorTheme" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/dataBit" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/data_bit" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/dataBitValue" android:background="@color/colorTheme" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="@color/colorTheme" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/parity" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/parity_str" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/parityValue" android:background="@color/colorTheme" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textColor="@color/colorTheme" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/flowControl" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/flow" android:layout_weight="1.8"/>
+            <Spinner android:gravity="center" android:id="@+id/flowControlValue" android:background="@color/colorTheme" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1" android:inputType="none"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorGreen" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_temperature"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temperature ℃"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_temp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorBlue" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_water"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Moisture %"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_water" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorPurple" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_elect"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Conductivity(EC)\10 us/cm"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_elect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/color8" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="10dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:padding="3dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_cuvette"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="pH\10PH"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_ph" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/color5" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:padding="3dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_element"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(N)\10mg/kg"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_n" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/color6" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="10dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:padding="3dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_element"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(P)\10mg/kg"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_p" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="5dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/color7" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:padding="3dp" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_element"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(K)\10mg/kg"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_k" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:layout_weight="1">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@color/colorOrange" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="10dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_salt"/>
+                    <TextView android:textSize="20sp" android:textColor="@color/colorWhite" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fertility\10 mg/kg"/>
+                </LinearLayout>
+                <TextView android:textSize="30sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:id="@+id/tv_salt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="***"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:tag="Read block" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_margin="1.5dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_weight="1">
+        <TextView android:textStyle="bold" android:textColor="@color/colorTheme" android:gravity="center" android:id="@+id/ReadBytes" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/read_bytes" android:layout_weight="3"/>
+        <EditText android:textColor="@color/colorWhite" android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/ReadValues" android:background="@color/colorTheme" android:focusableInTouchMode="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_weight="1"/>
+        <Button android:textSize="10dp" android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/clearButton" android:background="@drawable/bg_button" android:layout_width="match_parent" android:layout_height="30dp" android:scaleType="centerInside" android:text="@string/clear" android:layout_weight="3"/>
+    </LinearLayout>
+    <LinearLayout android:tag="Write block" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3dp">
+        <TextView android:textStyle="bold" android:textColor="@color/colorTheme" android:gravity="center" android:id="@+id/WriteBytes" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/write_bytes" android:layout_weight="3"/>
+        <EditText android:textColor="@color/colorWhite" android:textColorHint="@color/colorWhite" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/WriteValues" android:background="@color/colorTheme" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:hint="@string/hint" android:maxLength="255" android:editable="true" android:layout_weight="1"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="3">
+            <Button android:textSize="10dp" android:textColor="@color/colorWhite" android:gravity="center" android:id="@+id/WriteButton" android:background="@drawable/bg_button" android:layout_width="match_parent" android:layout_height="30dp" android:scaleType="centerInside" android:text="@string/write" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/colorWhite" android:id="@+id/btn_save" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:text="记录数据" android:layout_weight="1"/>
+        <Button android:textColor="@color/colorWhite" android:id="@+id/btn_share" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Save to *.xls" android:layout_weight="1"/>
+        <Button android:textColor="@color/colorWhite" android:id="@+id/btn_print" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:text="打印数据" android:layout_weight="1"/>
+        <Button android:textColor="@color/colorWhite" android:id="@+id/btn_check" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Data" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="20dp" android:layout_marginTop="5dp" android:layout_marginBottom="5dp">
+        <TextView android:textSize="10sp" android:textColor="@color/colorWhite" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The data is stored in the root directory.(Soil_parameters.xls)"/>
+        <TextView android:textSize="10sp" android:textColor="@color/colorWhite" android:layout_gravity="center_horizontal" android:id="@+id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="v1.0.1"/>
+    </LinearLayout>
+</LinearLayout>

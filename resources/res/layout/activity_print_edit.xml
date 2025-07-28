@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/snack_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center_vertical" android:padding="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_back" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/iv_back"/>
+        <TextView android:textSize="16sp" android:textColor="@color/colorBlack" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="打印预览" android:layout_centerInParent="true"/>
+        <TextView android:textColor="@color/colorPrimary" android:id="@+id/tv_ok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="确定打印" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="15dp" app:cardCornerRadius="3dp" app:cardElevation="1dp">
+            <LinearLayout android:orientation="vertical" android:padding="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="淮安张恒植保"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="客户" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_kehu" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入客户名称" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="种植品种" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_zzpz" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入种植品种" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="检测地块" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_jcdk" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入检测地块" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="检测时间" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_jcsj" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入检测时间" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="耕种时间" android:layout_weight="1"/>
+                </LinearLayout>
+                <RadioGroup android:orientation="vertical" android:id="@+id/rg" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RadioButton android:textSize="14sp" android:id="@+id/rb_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="备耕期"/>
+                    <RadioButton android:textSize="14sp" android:id="@+id/rb_yzhm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="移栽缓苗期"/>
+                    <RadioButton android:textSize="14sp" android:id="@+id/rb_sz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="生长期"/>
+                    <RadioButton android:textSize="14sp" android:id="@+id/rb_kh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开花期"/>
+                    <RadioButton android:textSize="14sp" android:id="@+id/rb_jg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="结果期"/>
+                </RadioGroup>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="检测项目" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤温度" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trwd" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤温度(℃)" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤湿度" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trsd" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤湿度(%RH)" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤酸碱度" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trsjd" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤酸碱度(ph)" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤氮N" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trn" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤氮N" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤磷P" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trp" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤磷P" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤钾K" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trk" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤钾K" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="土壤EC" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trec" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="请输入土壤EC" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp"/>
+                <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="植保解决方案"/>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*温度管理" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_wdgl" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="白天25-30℃" android:hint="请输入温度管理" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*土壤水分" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trsf" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="80%RH" android:hint="请输入土壤水分" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*土壤酸碱度" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_sjd" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="5.5-7.0ph" android:hint="请输入土壤酸碱度" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*土壤EC" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_ec" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="1.5mS/cm" android:hint="请输入土壤EC" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*有机肥" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_yjf" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="中化有机肥" android:hint="请输入有机肥名称" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_yjf_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="8000公斤/亩" android:hint="请输入有机肥用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*微生物菌剂" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_wsw" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="双藻菌露" android:hint="请输入菌剂名称" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_wsw_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="2公斤/亩" android:hint="请输入菌剂用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*生物有机肥" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_swyjf" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="海藻有机肥" android:hint="请输入生物有机肥名称" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_swyjf_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="60公斤/亩" android:hint="请输入生物有机肥用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*复混肥" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_fhf" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="师马15-5-20" android:hint="请输入复混肥名称" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_fhf_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="45公斤/亩" android:hint="请输入复混肥用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*土壤调理剂" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_trtlj" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="双藻土壤调理剂" android:hint="请输入土壤调理剂" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_trtlj_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="20公斤/亩" android:hint="请输入土壤调理剂用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*中微量元素" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_zwlys" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="进口糖醇钙" android:hint="请输入中微量元素" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_zwlys_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="20公斤/亩" android:hint="请输入中微量元素用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*杀菌剂" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <EditText android:textSize="14sp" android:id="@+id/et_sjj" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="甲霜灵.恶霉灵" android:hint="请输入杀菌剂" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_sjj_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="2公斤/亩" android:hint="请输入杀菌剂用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="30dp" android:layout_marginTop="10dp">
+                    <TextView android:textColor="@color/colorBlack" android:layout_width="0dp" android:layout_height="wrap_content" android:text="*杀虫剂" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp">
+                    <EditText android:textSize="14sp" android:id="@+id/et_scj" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="联苯.噻虫胺" android:hint="请输入杀虫剂" android:layout_weight="1"/>
+                    <EditText android:textSize="14sp" android:id="@+id/et_scj_num" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:text="4公斤/亩" android:hint="请输入杀虫剂用量" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="15dp">
+                    <TextView android:textSize="14sp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="植保服务热线" android:layout_weight="1"/>
+                    <TextView android:textSize="14sp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="15952342929" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
